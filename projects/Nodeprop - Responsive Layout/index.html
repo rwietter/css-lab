@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Definindo que a largura vai ser o total do dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Layout</title>
+    <meta name="description" content="responsive layout for study" />
+    <meta name="keywords" content="Responsive layout, css, html" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="euiciowr" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+      integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/icon.png" />
+  </head>
+  <body>
+    <header class="containermd header">
+      <a href="index.html" class="logo">Lorem</a>
+      <button class="background-image white-global-color btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+      <nav class="menu white-global-color">
+        <a class="btn-close"><i class="fa fa-times"></i></a>
+        <ul>
+          <li><a class="white-global-color" href="#">Home</a></li>
+          <li><a class="white-global-color" href="#">Clientes</a></li>
+          <li><a class="white-global-color" href="#">Serviços</a></li>
+          <li><a class="white-global-color" href="#">Blog</a></li>
+          <li><a class="white-global-color" href="#">Quem somos</a></li>
+          <li><a class="white-global-color" href="#">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="containermd banner">
+      <div class="title">
+        <h2 class="white-global-color">OUSE INOVAR!</h2>
+        <h3 class="white-global-color">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </h3>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-cadastrar bg-black">
+          Cadastrar <i class="fa fa-arrow-circle-right"></i>
+        </button>
+        <button class="btn btn-sobre white-global-color">
+          Sobre<i class="fa fa-question-circle"></i>
+        </button>
+      </div>
+    </div>
+    <main class="containermd servicos">
+      <article class="servico">
+        <a href="#"><img src="./img/criacoes.jpg" alt="Camapanhas"/></a>
+        <div class="inner">
+          <a href="#">Campanhas Publicitárias</a>
+          <h4>Impressos, VTs e Jingles</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem tempore nemo quia debitis? At, fugiat distinctio nisi
+            in sed mollitia molestias earum laboriosam suscipit tempore atque
+            quidem nobis eaque voluptatibus!
+          </p>
+        </div>
+      </article>
+      <article class="servico">
+        <a href="#"><img src="./img/md.jpg" alt="Marketing"/></a>
+        <div class="inner">
+          <a class="bg-black" href="#">Marketing Digital</a>
+          <h4 class="bg-black">Administração de redes sociais</h4>
+          <p class="bg-black">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem tempore nemo quia debitis? At, fugiat distinctio nisi
+            in sed mollitia molestias earum laboriosam suscipit tempore atque
+            quidem nobis eaque voluptatibus!
+          </pcclass="bg-black">
+        </div>
+      </article>
+      <article class="servico border-radius">
+        <a href="#"
+          ><img src="./img/cs.jpg" alt="Desenvolvimento de websites"
+        /></a>
+        <div class="inner">
+          <a href="#">Desenvolvimento de websites</a>
+          <h4>Layouts administráveis e responsivos</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem tempore nemo quia debitis? At, fugiat distinctio nisi
+            in sed mollitia molestias earum laboriosam suscipit tempore atque
+            quidem nobis eaque voluptatibus!
+          </p>
+        </div>
+      </article>
+    </main>
+    <section class="containermd newsletter">
+      <h2 class="white-global-color">Inscreva-se agora</h2>
+      <h3 class="white-global-color">Receba novidades</h3>
+      <form>
+        <input class="white-global-color border-radius" type="email" name="email" placeholder="Seu email" />
+        <button class="bg-black border-radius">Cadastrar</button>
+      </form>
+    </section>
+    <footer class="containermd background-image">
+      <div class="social-icons">
+        <a href="#" class="fab fa-facebook-square"></a>
+        <a href="#" class="fab fa-twitter-square"></a>
+        <a href="#" class="fab fa-google-plus-square"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fa fa-envelope"></a>
+      </div>
+      <div class="container">
+        <p class="copyright">
+          Copyright @ Lorem 2020. Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".btn-menu").click(function() {
+        $(".menu").fadeIn(600)
+      });
+      $(".btn-close").click(function() {
+        $(".menu").fadeOut(600)
+      });
+    </script>
+  </body>
+</html>

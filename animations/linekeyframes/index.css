@@ -1,0 +1,31 @@
+.foo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.line{
+  font-size: max(15px, 2em);
+  font-weight: 900;
+  border-right-width: 4px;
+  border-right-style: solid;
+  border-right-color: #000;
+  animation: cursorBlink 1000ms steps(40) infinite normal, typing 10000ms steps(100) normal 1 both;
+  -webkit-animation: cursorBlink 1000ms steps(40) infinite normal, typing 10000ms steps(100) normal 1 both;
+  white-space: nowrap;
+  max-width: 0vw;
+  overflow: hidden;
+}
+
+@keyframes cursorBlink {
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  100% {
+    max-width: 100vw;
+  }
+}
