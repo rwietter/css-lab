@@ -1,0 +1,83 @@
+*, *::after, *::before, html, body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  line-height: 2rem;
+  width: 17rem;
+}
+
+.container input {
+  height: 2rem;
+  border: none;
+  background: rgba(200, 200, 200, 0.8);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 1.5rem;
+  outline: none;
+}
+
+.container input::placeholder {
+  color: rgba(118, 23, 173, 0.8);
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.container input::-webkit-input-placeholder {
+  color: rgba(118, 23, 173, 0.8);
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.container input:-ms-input-placeholder {
+  color: rgba(118, 23, 173, 0.8);
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.container input::-moz-placeholder {
+  color: rgba(118, 23, 173, 0.8);
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.container button {
+  margin: 1rem 0;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: clamp(12px, 3vw, 1rem);
+  color: #FFF;
+  background: rgba(118, 23, 173, 0.8);
+}
+
+.container button:hover {
+  background: rgba(118, 23, 173, 0.9);
+}
