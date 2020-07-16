@@ -1,0 +1,239 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.wrapper {
+	padding: 20px;
+	font-family: sans-serif;
+}
+
+/* ---------- Flex-flow shorthand ---------- */
+
+.flex-flow {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column nowrap;
+}
+
+.flex-flow h3 {
+	width: 30%;
+	color: #ffff;
+	background: #959349;
+}
+
+/* ---------- Flex shorthand ---------- */
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap; /* direction | wrap */
+	font-family: sans-serif;
+	color: #906590;
+}
+
+.container h1 {
+	/* flex-grow, flex-shrinke, flex-basis */
+	flex: 1 1 0;
+	border: red solid 2px;
+}
+
+.container h2 {
+	flex: 1 1 0;
+	border: blue solid 2px;
+}
+
+.container h3 {
+	flex-grow: 0;
+	border: orange solid 2px;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	font-weight: 500;
+	text-align: justify;
+}
+
+/* ---------- Justify content ---------- */
+
+.justify-content {
+	width: 100%;
+}
+
+.justify-content ul {
+	color: darkslateblue;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/* ---------- Align Items ---------- */
+
+.align-items {
+	height: 90vh;
+}
+.align-items ul {
+	display: flex;
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: stretch;
+	align-items: baseline;
+	align-items: center;
+	background: #3466;
+	height: 40vh;
+}
+.align-items ul li {
+	list-style: none;
+	background: #b99992;
+	height: 70px;
+	flex: 1;
+	margin: 0 20px;
+}
+
+/* ---------- Align content ---------- */
+
+.align-content {
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	align-content: flex-end;
+	align-content: flex-start;
+	align-content: space-between;
+	background: #3466;
+	width: 100%;
+	height: 30vh;
+}
+
+.align-content div {
+	width: 60px;
+	height: 60px;
+	margin: 10px 10px;
+	background: #fff;
+}
+
+/* ---------- Align grow ---------- */
+
+.flex-grow {
+	display: flex;
+	height: 30vh;
+	width: 100%;
+	background: #3466;
+}
+
+.flex-grow div {
+	height: 60px;
+	flex-grow: 1;
+	background: #fff;
+	margin: 10px;
+	text-align: center;
+}
+
+.flex-grow div:first-child {
+	flex-grow: 4;
+	background: #906590;
+}
+
+/* ---------- Flex basis ---------- */
+
+.flex-basis {
+	display: flex;
+	height: 30vh;
+	width: 100%;
+	background: #3466;
+}
+
+.flex-basis div {
+	height: 60px;
+	flex-grow: 1;
+	flex-basis: 0;
+	background: #fff;
+	margin: 10px;
+	text-align: center;
+}
+
+.flex-basis div:last-child {
+	flex-basis: auto; /* 0, 1, unidade, auto*/
+	background: #906590;
+}
+
+/* ---------- Flex shrink ---------- */
+
+.flex-shrink {
+	display: flex;
+	height: 30vh;
+	width: 100%;
+	background: #3466;
+}
+
+.flex-shrink div {
+	height: 60px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background: #fff;
+	margin: 10px;
+	text-align: center;
+}
+
+.flex-shrink div:nth-last-child(2) {
+	flex-shrink: 1; /* numero, 0, 1*/
+	background: #309af0;
+}
+
+.flex-shrink div:last-child {
+	flex-shrink: 0; /* numero, 0, 1*/
+	background: #906590;
+}
+
+/* ---------- Flex order ---------- */
+
+.order {
+	display: flex;
+	background: #3466;
+	width: 100%;
+	height: 30vh;
+}
+
+.order div {
+	flex: 1 0 auto;
+	background: #fff;
+	margin: 10px 30px;
+}
+
+.order3 {
+	order: -3;
+}
+
+.order2 {
+	order: 1;
+}
+
+/* ---------- Flex align self ---------- */
+
+.align-self {
+	display: flex;
+	flex-flow: row wrap;
+	background: #3466;
+	width: 100%;
+	height: 30vh;
+}
+
+.align-self div {
+	flex: 1 0 auto;
+	height: 40px;
+	background: #fff;
+	margin: 0 20px;
+}
+
+.align-self .self1 {
+	align-self: center;
+}
+
+.align-self .self2 {
+	align-self: flex-end;
+}
+
+.align-self .self3 {
+	align-self: baseline;
+}
