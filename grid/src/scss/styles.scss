@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Raleway:wght@400;600;700;900&display=swap');
+
+$font-primary: 'Comfortaa', -apple-system, cursive;
+$font-secondary: 'Raleway', -apple-system, sans-serif;
+$color-primary: rgb(255, 255, 255);
+$color-secondary: #ececec;
+
+// css reset
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  background: $color-primary;
+  font-family: $font-secondary;
+}
+
+img {
+  width: 100%;
+}
+
+// grid master: positioning elements
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas:
+    'header header header'
+    'sidenav content marketing'
+    'footer footer footer';
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidenav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.marketing {
+  grid-area: marketing;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+// styles header
+.header {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 20px;
+  a img {
+    max-width: clamp(5rem, 50%, 10vw);
+  }
+  .navbar {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-flow: row wrap;
+      li a {
+        display: block;
+        color: $color-primary;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        font-size: clamp(8px, 1.125em, 2vw);
+        transition: 0.5s;
+
+        &:hover {
+          text-decoration: underline;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+      li + li {
+        margin-left: 10px; // evita margens desnecessárias no primeiro item
+      }
+    }
+  }
+}
+
+// styles sidebar
+.sidebar {
+  background: $color-secondary;
+  ul li a {
+    display: block;
+    min-width: 3.75em;
+    max-width: 8rem;
+    margin: 0 auto 30px auto;
+    background: $color-primary;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background: #b07df8;
+    }
+  }
+  ul li:first-child {
+    margin-top: 20px;
+  }
+  ul li a img {
+    max-width: 100%;
+  }
+}
+
+// content
+.content {
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  .title {
+    color: #b07dfb;
+    font-size: clamp(16px, 2em, 2.5vw);
+    span {
+      font-size: clamp(12px, 1.2em, 1.5vw);
+      font-style: italic;
+    }
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    align-items: flex-start;
+    section {
+      background: linear-gradient(135deg, #8844ee, #b07dfb);
+      height: auto;
+      color: #fff;
+      padding: 10px 0 0 0;
+      box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+      display: grid;
+      width: 50%;
+      grid-template-areas:
+        'first'
+        'second';
+      justify-items: center;
+      align-items: center;
+      border-radius: 2px;
+    }
+    .peso {
+      grid-column: first;
+      color: #c6a0ff;
+      font-size: clamp(14px, 2em, 2vw);
+    }
+    .kg {
+      grid-row: second;
+      background: $color-primary;
+      color: #8844ee;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      font-size: clamp(12px, 1.5em, 1.5vw);
+      margin-top: 5px;
+    }
+    .idade {
+      grid-column: first;
+      color: #c6a0ff;
+      font-size: clamp(14px, 2em, 2vw);
+    }
+    .age {
+      grid-column: second;
+      background: $color-primary;
+      color: #8844ee;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      font-size: clamp(12px, 1.5em, 1.5vw);
+      margin-top: 5px;
+    }
+  }
+  .column-wide {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  .history {
+    color: #8844ee;
+    font-size: clamp(10px, 1em, 1.5vw);
+    font-weight: 200;
+    line-height: 1.5em;
+  }
+  .content-image-wolf1 {
+    grid-row: span 2;
+    align-self: end;
+  }
+  .content-image-wolf2 {
+    align-self: end;
+  }
+  img {
+    width: 100%;
+  }
+  p {
+    font-size: clamp(8px, 1.2em, 1vw);
+    line-height: 1.6em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .citation {
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+    border-radius: 8px;
+    align-self: start;
+    p {
+      font-size: clamp(14px, 1.8em, 2vw);
+      color: $color-primary;
+      font-family: $font-secondary;
+      text-align: center;
+      font-style: italic;
+      font-weight: 400;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .animal-data {
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+    border-radius: 8px;
+    li {
+      font-size: clamp(12px, 1.5em, 1.5vw);
+      color: $color-primary;
+      font-family: $font-secondary;
+      text-align: left;
+      font-weight: 200;
+      padding: 20px;
+    }
+    li + li {
+      border-top: 2px solid rgb(169, 112, 255);
+    }
+  }
+  .animal-informations p + p {
+    margin-top: 20px;
+  }
+}
+
+// marketing
+.marketing {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background: $color-secondary;
+  display: grid;
+  align-content: start;
+  gap: 30px;
+  .marketing-item {
+    padding: 20px 1.875rem 0 1.875rem;
+    cursor: pointer;
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: 0.3125rem;
+    }
+  }
+}
+
+// footer
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: clamp(10px, 1em, 2vw);
+  }
+}
+
+// medias
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    grid-template-areas:
+      'header header header'
+      'sidenav content content'
+      'sidenav marketing marketing'
+      'footer footer footer';
+  }
+  .marketing {
+    grid-template-columns: 2;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .sidebar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    position: relative;
+  }
+  .sidebar::after {
+    content: '→';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    animation: arrow-sidebar 1s ease-in-out 0s infinite alternate;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 60px;
+    margin: 0;
+    li {
+      padding: 20px 10px;
+    }
+    li:first-child {
+      margin: 0;
+    }
+    li a {
+      margin: 0;
+    }
+  }
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'header'
+      'sidenav'
+      'content'
+      'marketing'
+      'footer';
+  }
+}
+
+@keyframes arrow-sidebar {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    max-width: 56.25rem;
+    padding: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .marketing {
+    grid-template-columns: auto;
+    .marketing-item {
+      padding: 0 30px;
+    }
+  }
+}
